@@ -1,0 +1,137 @@
+<!-- cSpell: disable -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        padding: 50px;
+      }
+
+      #container {
+        position: relative;
+        left: 15%;
+        width: 500px;
+        height: 500px;
+        border: 5px solid black;
+      }
+
+      #blue {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        top: 0%;
+        left: 0%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #red {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        top: 50%;
+        left: 0%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #green {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: green;
+        top: 10%;
+        left: 10%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #purple {
+        width: 50px;
+        height: 50px;
+        background-color: purple;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #cont-int {
+        display: flex;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border: 5px dashed blue;
+      }
+
+      div {
+        border-radius: 20px;
+      }
+
+      #para {
+        position: relative;
+        top: 200px;
+        left: 500px;
+        color: brown;
+        background-color: yellowgreen;
+      }
+
+      #freccia {
+        position: relative;
+        left: 400px;
+        top: 90px;
+        transform: rotate(45deg);
+        width: 130px;
+        height: 4px;
+        background-color: brown;
+      }
+
+      #punta1 {
+        position: relative;
+        bottom: 50px;
+        border: 4px dotted brown;
+        width: 500px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text">
+      <h3>Il body è flex.</h3>
+      <h3>Il contenitore con bordo nero ha pos. relative e left: 15%.</h3>
+      <h3>
+        Il quadrato blu è figlio diretto del cont. nero e ha pos. absolute (0,
+        0)
+      </h3>
+      <h3>Il container blu ha pos. rel. ma sembra comportarsi come absolute</h3>
+      <h3>Il quad. verde ha pos. abs. ed è figlio diretto del cont. blue</h3>
+
+      <h3 id="para">
+        Io sono un paragrafo con pos. relative<br />
+        e il mio posto iniziale non viene occupato.
+      </h3>
+      <div id="freccia"></div>
+      <section id="punta1"></section>
+      <h3>
+        Il quad. rosso ha pos. relative(0,0), è figlio diretto del cont. blue<br />
+        e sebra comportarsi come absolute per quanto riguarda<br />
+        il punto di riferimento.
+      </h3>
+      <h3>
+        Il quad. viola non ha pos. e, come previsto, non occupa<br />
+        la posizione da cui si è mosso il rosso
+      </h3>
+    </div>
+    <div id="container">
+      <div id="blue"></div>
+      <div id="cont-int">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="purple"></div>
+      </div>
+    </div>
+  </body>
+</html>

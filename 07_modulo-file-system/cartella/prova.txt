@@ -1,0 +1,1 @@
+sto (sovra)scrivendo nel file prova.txt. Ora sto 'appendendo' testo nel file prova.txt

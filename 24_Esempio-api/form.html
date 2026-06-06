@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="http://localhost:3000/api/prodotti" method="post">
+      <input type="text" name="idProdotto" placeholder="ID Prodotto" required />
+      <input type="text" name="nome" placeholder="Nome Prodotto" required />
+      <input type="text" name="marca" placeholder="Marca" required />
+      <input
+        type="number"
+        step="0.01"
+        name="prezzo"
+        placeholder="Prezzo"
+        required />
+      <input type="text" name="categoria" placeholder="Categoria" required />
+      <textarea
+        name="descrizione"
+        placeholder="Descrizione"
+        required></textarea>
+      <select name="disponibile" required>
+        <option value="true">Disponibile</option>
+        <option value="false">Non disponibile</option>
+      </select>
+
+      <h3>Recensione</h3>
+      <input type="text" name="idRecensione" placeholder="ID Recensione" />
+      <input type="text" name="utente" placeholder="Utente" />
+      <input
+        type="number"
+        name="voto"
+        min="1"
+        max="5"
+        placeholder="Voto (1-5)" />
+      <textarea name="commento" placeholder="Commento"></textarea>
+      <input type="date" name="data" />
+
+      <button type="submit">Invia Prodotto</button>
+    </form>
+  </body>
+</html>
